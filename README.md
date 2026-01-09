@@ -39,7 +39,7 @@ apt install jq         # Ubuntu/Debian
 
 ```bash
 # Clone this repo
-git clone https://github.com/YOUR_USERNAME/claude-ralph.git
+git clone https://github.com/CalebWinston/claude-ralph.git
 
 # Copy files to your project
 cp claude-ralph/claude-ralph.sh your-project/scripts/
