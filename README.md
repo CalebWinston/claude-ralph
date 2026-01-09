@@ -331,9 +331,33 @@ your-project/
 }
 ```
 
-## Skills
+## Slash Command
 
-### PRD Generator (`skills/prd/`)
+### `/ralph` - Quick Start Command
+
+The easiest way to use Claude Ralph is with the `/ralph` slash command in Claude CLI.
+
+**Install:**
+```bash
+mkdir -p ~/.claude/commands
+cp commands/ralph.md ~/.claude/commands/
+```
+
+**Usage:**
+```bash
+claude
+> /ralph
+```
+
+This gives you an interactive menu to:
+1. **Setup** - Install Claude Ralph in your current project
+2. **Create PRD** - Generate a new PRD through guided Q&A
+3. **Convert PRD** - Turn markdown PRD into `prd.json`
+4. **Run** - Start the autonomous loop
+
+### Skills
+
+#### PRD Generator (`skills/prd/`)
 
 Generates comprehensive Product Requirements Documents through interactive Q&A.
 
@@ -342,7 +366,7 @@ Usage:
 claude "Create a PRD for user authentication"
 ```
 
-### PRD to JSON Converter (`skills/ralph/`)
+#### PRD to JSON Converter (`skills/ralph/`)
 
 Converts markdown PRDs to `prd.json` format for Claude Ralph execution.
 
@@ -351,12 +375,11 @@ Usage:
 claude "Convert this PRD to ralph format"
 ```
 
-### Installing Skills Globally
-
-Copy skills to your Claude CLI config:
+### Installing All Commands & Skills
 
 ```bash
 mkdir -p ~/.claude/commands
+cp commands/ralph.md ~/.claude/commands/
 cp -r skills/prd ~/.claude/commands/
 cp -r skills/ralph ~/.claude/commands/
 ```
