@@ -1,0 +1,25 @@
+#!/bin/bash
+# Completion hook - runs when all stories are done (or max iterations reached)
+# Available environment variables:
+#   STATUS         - "success" or "failed"
+#   TOTAL_TOKENS   - total tokens used across all iterations
+#   ESTIMATED_COST - estimated cost in USD
+#
+# Example uses:
+#   - Send final notification
+#   - Generate report
+#   - Trigger CI/CD pipeline
+
+echo "Completion hook: Claude Ralph finished with status $STATUS"
+echo "Total tokens: $TOTAL_TOKENS"
+echo "Estimated cost: \$$ESTIMATED_COST"
+
+# Example: Send desktop notification (macOS)
+# osascript -e "display notification \"Status: $STATUS, Cost: \$$ESTIMATED_COST\" with title \"Claude Ralph Complete\""
+
+# Example: Trigger deployment
+# if [ "$STATUS" = "success" ]; then
+#     curl -X POST https://your-ci-server/deploy
+# fi
+
+exit 0

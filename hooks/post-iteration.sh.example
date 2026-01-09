@@ -1,0 +1,23 @@
+#!/bin/bash
+# Post-iteration hook - runs after each Claude iteration
+# Available environment variables:
+#   ITERATION - current iteration number
+#   STATUS    - "success" or "failed"
+#   STORY_ID  - the story that was worked on
+#
+# Example uses:
+#   - Push changes
+#   - Run additional tests
+#   - Send notifications
+
+echo "Post-iteration hook: Iteration $ITERATION completed with status $STATUS for story $STORY_ID"
+
+# Example: Push after each successful iteration
+# if [ "$STATUS" = "success" ]; then
+#     git push origin HEAD
+# fi
+
+# Example: Run integration tests
+# npm run test:integration
+
+exit 0

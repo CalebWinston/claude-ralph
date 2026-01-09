@@ -1,0 +1,19 @@
+#!/bin/bash
+# Pre-iteration hook - runs before each Claude iteration
+# Available environment variables:
+#   ITERATION - current iteration number
+#
+# Example uses:
+#   - Pull latest changes
+#   - Run pre-checks
+#   - Log to external system
+
+echo "Pre-iteration hook: Starting iteration $ITERATION"
+
+# Example: Pull latest changes before each iteration
+# git pull --rebase origin main
+
+# Example: Check disk space
+# df -h . | tail -1
+
+exit 0

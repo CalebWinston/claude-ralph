@@ -1,0 +1,11 @@
+{
+  "maxIterations": 10,
+  "maxRetries": 3,
+  "retryDelay": 5,
+  "maxTokens": 0,
+  "maxCost": 0,
+  "webhookUrl": "",
+  "slackWebhook": "",
+  "createPrOnComplete": false,
+  "enableHooks": true
+}

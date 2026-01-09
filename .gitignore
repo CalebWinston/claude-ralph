@@ -4,10 +4,20 @@
 prd.json
 progress.txt
 .last-branch
+.ralph-state.json
+claude-ralph.config.json
+
+# Logs directory contents (keep the dir, ignore contents)
+logs/*
+!logs/.gitkeep
 
 # Archive directory contents (keep the dir, ignore contents)
 archive/*
 !archive/.gitkeep
+
+# Hooks (user-specific, only keep examples)
+hooks/*.sh
+!hooks/*.sh.example
 
 # OS files
 .DS_Store
